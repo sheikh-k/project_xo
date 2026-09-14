@@ -1,0 +1,31 @@
+<MenuScreen>:
+    name: "menu"
+    
+    BoxLayout:
+        orientation: "horizontal"
+        canvas.before: 
+            Color: 
+                rgba: (.8,.8,.8,1)
+            Rectangle:
+                pos:self.pos
+                size:self.size
+        
+        ScrollView:
+            id: menu_area
+            do_scroll_x: False
+            BoxLayout:
+                id: menu_content
+                orientation: "vertical"
+                Label:
+                    text:"Menuscroolarea"
+                    pos_hint: {'center_x':0.5,"center_y":0.5}
+        BoxLayout:
+            id: menu_button_area
+            orientation: "horizontal"
+            size_hint: (0.4,1)
+            Button:
+                text:"Play"
+                size_hint: (1,0.1)
+                pos_hint: {'top':1}
+                on_press: root.parent.parent.cbtnAction('c')
+                

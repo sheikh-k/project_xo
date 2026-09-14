@@ -1,0 +1,6 @@
+proton/
+.vscode/
+__pycache__/
+*.py[cod]
+*.log
+.env

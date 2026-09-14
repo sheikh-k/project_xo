@@ -1,0 +1,25 @@
+<ListScreen>:
+	name: "list"
+	BoxLayout:
+		orientation: "horizontal"
+		ScrollView:
+			id: list_area
+			do_scroll_x: False
+			BoxLayout:
+				id: list_content
+				orientation: "vertical"
+				
+		BoxLayout:
+			id: list_button_area
+			orientation: "vertical"
+			Button:
+                text:"select"
+                size_hint: (1,0.1)
+                pos_hint: {'top':1}
+                on_press: 
+			Button:
+                text:"Back"
+                size_hint: (1,0.1)
+                pos_hint: {'top':0.8}
+                on_press: 
+			

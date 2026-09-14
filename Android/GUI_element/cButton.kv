@@ -1,0 +1,62 @@
+<Cbtn>:
+    size_hint: (0.25,None)
+    height:self.width
+    background_color: (0, 0, 0, 0)
+
+
+
+<CircleBtns>:
+    canvas.before:
+        Color: 
+            rgba: (.949,.898,0.77,.1)
+        RoundedRectangle:
+            pos:self.pos
+            size:self.size 
+            radius: [self.height / 8]
+            
+    size_hint: (0.20,None)
+    height: self.width
+    pos_hint: {'right':1}
+    Cbtn:
+        id: cbtn_Triangle
+        pos_hint:{'center_x':.5625 , 'center_y':.75}
+        canvas.before:
+            Color:
+                rgba:(0.82, 0.96, 0.15, 1)
+            Ellipse:
+                pos:self.pos
+                size:self.size
+        on_press: root.parent.cbtnAction('t')    
+    
+    Cbtn:
+        id: cbtn_Circle
+        pos_hint:{'center_x':.75, 'center_y':.4375}
+        canvas.before:
+            Color:
+                rgba:(0.96, 0.28, 0.15, 1)
+            Ellipse:
+                pos:self.pos
+                size:self.size
+        on_press: root.parent.cbtnAction('c')
+
+    Cbtn:
+        id: cbtn_Cross
+        pos_hint:{'center_x':.4375 , 'center_y':.25}
+        canvas.before:
+            Color:
+                rgba:(0.23, 0.94, 0.31, 1)
+            Ellipse:
+                pos:self.pos
+                size:self.size
+        on_press: root.parent.cbtnAction('cr')
+
+    Cbtn:
+        id: cbtn_Square
+        pos_hint:{'center_x':.25 , 'center_y':.5625}
+        canvas.before:
+            Color:
+                rgba:(0.23, 0.595, 0.942, 1)
+            Ellipse:
+                pos:self.pos
+                size:self.size
+        on_press: root.parent.cbtnAction('sq')

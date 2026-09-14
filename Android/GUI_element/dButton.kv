@@ -1,0 +1,42 @@
+<Dbtn>:
+    size_hint: (0.25,None)
+    height:self.width
+    background_color: (0, 0, 0, 0)
+    canvas.before:
+        Color:
+            rgba:( .40 , 0.33 , .10 , .9)
+        Rectangle:
+            pos:self.pos
+            size:(self.width,self.width)
+
+<ArrowBtns>:
+    canvas.before:
+        Color: 
+            rgba: (.949,.898,0.77,.1)
+        RoundedRectangle:
+            pos:self.pos
+            size:self.size 
+            radius: [self.height / 8]
+            
+    size_hint: (0.2,None)
+    height: self.width
+    pos_hint: {'right':.2}
+    Dbtn:
+        id: dbtn_up
+        pos_hint:{'center_x':.5625 , 'center_y':.75}
+        on_press: root.parent.abtnAction('up')    
+    
+    Dbtn:
+        id: dbtn_right
+        pos_hint:{'center_x':.75, 'center_y':.4375}
+        on_press: root.parent.abtnAction('right')
+
+    Dbtn:
+        id: dbtn_down
+        pos_hint:{'center_x':.4375 , 'center_y':.25}
+        on_press: root.parent.abtnAction('down')
+
+    Dbtn:
+        id: dbtn_left
+        pos_hint:{'center_x':.25 , 'center_y':.5625}
+        on_press: root.parent.abtnAction('left')
